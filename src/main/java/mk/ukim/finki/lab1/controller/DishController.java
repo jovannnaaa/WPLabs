@@ -48,6 +48,12 @@ public class DishController  {
         return "redirect:/dishes";
     }
 
+    @PostMapping("/like/{id}")
+    public String likeDish(@PathVariable Long id) {
+        dishService.likeDish(id);
+        return "redirect:/dishes";
+    }
+
     @GetMapping("/delete/{id}")
     public String deleteDish(@PathVariable Long id) {
         dishService.delete(id);

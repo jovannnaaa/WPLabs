@@ -56,4 +56,12 @@ public class DishServiceImpl implements DishService {
     public void delete(Long id) {
         dishRepository.deleteById(id);
     }
+
+    public void likeDish(Long id) {
+        Dish d = findById(id);
+        if (d != null) {
+            d.setLikes(d.getLikes() + 1);
+        }
+    }
+
 }

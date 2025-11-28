@@ -9,6 +9,7 @@ public class Dish {
     protected String name;
     protected String cuisine;
     protected int preparationTime;
+    private int likes;
 
     private static Long COUNTER = 0L;
 
@@ -18,6 +19,14 @@ public class Dish {
         this.cuisine = cuisine;
         this.preparationTime = preparationTime;
         this.id = ++COUNTER;
+        this.likes = 0;
+    }
+    public int getLikes() {
+        return likes;
+    }
+
+    public void setLikes(int likes) {
+        this.likes = likes;
     }
 
     public String getDishId() {
