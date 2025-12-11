@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
+<<<<<<< HEAD
     <meta charset="UTF-8">
     <title>Dish Form</title>
+=======
+  <meta charset="UTF-8">
+  <title>Dish Form</title>
+>>>>>>> 812905844b46c5ca08699c6e63d21c4f4dc2d071
 </head>
 <body>
 
@@ -14,6 +19,7 @@
       th:action="@{/dishes/edit/{id}(id=${dish.id})}"
       method="post">
 
+<<<<<<< HEAD
     <input type="hidden" th:value="${dish.id}" name="dishId">
 
     <div>
@@ -45,6 +51,39 @@
     </div>
 
     <button type="submit">Save Changes</button>
+=======
+  <input type="hidden" th:value="${dish.id}" name="dishId">
+
+  <div>
+    <label for="name">Name:</label>
+    <input id="name"
+           type="text"
+           name="name"
+           required
+           th:value="${dish.name}"/>
+  </div>
+
+  <div>
+    <label for="cuisine">Cuisine:</label>
+    <input id="cuisine"
+           type="text"
+           name="cuisine"
+           required
+           th:value="${dish.cuisine}"/>
+  </div>
+
+  <div>
+    <label for="preparationTime">Preparation Time:</label>
+    <input id="preparationTime"
+           type="number"
+           name="preparationTime"
+           min="1"
+           required
+           th:value="${dish.preparationTime}"/>
+  </div>
+
+  <button type="submit">Save Changes</button>
+>>>>>>> 812905844b46c5ca08699c6e63d21c4f4dc2d071
 </form>
 
 
@@ -54,6 +93,7 @@
       th:action="@{/dishes/add}"
       method="post">
 
+<<<<<<< HEAD
     <div>
         <label for="dishId">Dish ID:</label>
         <input id="dishId"
@@ -92,3 +132,43 @@
 
 </body>
 </html>
+=======
+  <div>
+    <label for="dishId">Dish ID:</label>
+    <input id="dishId"
+           type="text"
+           name="dishId"
+           required/>
+  </div>
+
+  <div>
+    <label for="nameA">Name:</label>
+    <input id="nameA"
+           type="text"
+           name="name"
+           required/>
+  </div>
+
+  <div>
+    <label for="cuisineA">Cuisine:</label>
+    <input id="cuisineA"
+           type="text"
+           name="cuisine"
+           required/>
+  </div>
+
+  <div>
+    <label for="preparationTimeA">Preparation Time:</label>
+    <input id="preparationTimeA"
+           type="number"
+           name="preparationTime"
+           min="1"
+           required/>
+  </div>
+
+  <button type="submit">Add Dish</button>
+</form>
+
+</body>
+</html>
+>>>>>>> 812905844b46c5ca08699c6e63d21c4f4dc2d071

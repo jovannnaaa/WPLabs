@@ -1,5 +1,9 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html xmlns:th="http://www.thymeleaf.org">
+=======
+<html>
+>>>>>>> 812905844b46c5ca08699c6e63d21c4f4dc2d071
 <head>
     <meta charset="utf-8">
     <title>Restaurant Chefs - Welcome to Our Restaurant</title>
@@ -20,20 +24,30 @@
 </header>
 <main>
     <h2>Choose a chef:</h2>
+<<<<<<< HEAD
     <a th:href="@{/chefs/chef-form}">Add Chef</a>
+=======
+>>>>>>> 812905844b46c5ca08699c6e63d21c4f4dc2d071
     <form action="/dishes" method="POST">
         <!-- Display radio buttons for each chef,
              the value should be the chef id
              and the displayed text should be:
              Name: <firstName> <lastName>, Bio: <bio> -->
         <th:block th:each="chef : ${chefs}">
+<<<<<<< HEAD
             <a th:href="@{'chefs/chef-form/{id}' (id = ${chef.id})}">Edit</a>
             <a th:href="@{'chefs/delete/{id}' (id = ${chef.id})}">Delete</a>
+=======
+>>>>>>> 812905844b46c5ca08699c6e63d21c4f4dc2d071
             <label>
                 <input type="radio" name="chefId" th:value="${chef.id}"/>
                 Name: <span th:text="${chef.firstName}"></span>
                 <span th:text="${chef.lastName}"></span>,
+<<<<<<< HEAD
                 Bio: <span th:text="|${chef.bio} Gender: ${chef.gender}|"></span>
+=======
+                Bio: <span th:text="${chef.bio}"></span>
+>>>>>>> 812905844b46c5ca08699c6e63d21c4f4dc2d071
             </label>
             <br/>
         </th:block>

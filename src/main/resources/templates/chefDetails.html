@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<<<<<<< HEAD
   <meta charset="utf-8">
   <title>Chef Details</title>
   <style type="text/css">
@@ -23,10 +24,35 @@
       border-radius: 3px;
     }
   </style>
+=======
+    <meta charset="utf-8">
+    <title>Chef Details</title>
+    <style type="text/css">
+        body {
+            width: 800px;
+            margin: auto;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 5px;
+            margin: 5px 0;
+            background-color: #f5f5f5;
+            border-radius: 3px;
+        }
+    </style>
+>>>>>>> 812905844b46c5ca08699c6e63d21c4f4dc2d071
 </head>
 <body>
 <!-- Dynamically display data -->
 <header>
+<<<<<<< HEAD
   <h1>Chef: <span th:text="${chef.getFirstName() + ' ' + chef.getLastName()}"></span></h1>
 </header>
 <section>
@@ -44,3 +70,18 @@
 </section>
 </body>
 </html>
+=======
+    <h1 th:text="'Chef: '+${chef.getFirstName()}+' '+${chef.getLastName()}"></h1>
+</header>
+<section>
+    <h2 th:text ="'Bio: '+${chef.getBio()}"> </h2>
+    <h2>Dishes prepared by this chef:</h2>
+    <ul>
+        <li th:each="dish : ${dishes}"
+            th:text="${dish.name} + ' - ' + ${dish.cuisine} + ' (' + ${dish.preparationTime} + ' min)'"></li>
+    </ul>
+</section>
+</body>
+</html>
+
+>>>>>>> 812905844b46c5ca08699c6e63d21c4f4dc2d071
